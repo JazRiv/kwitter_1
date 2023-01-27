@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kwitter Salas</title>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+	<!--Crea el id del boton, añade un icono de salida al boton, crea el evento para llamar a la funcion logout para que el
+	usuario salga de sesion-->
+<button id="logout" onclick="logout();" class="glyphicon glyphicon-log-out btn btn-danger">Salir</button>
+	<center>
+		<h1 class="header">	
+			Kwitter	
+			<sup>
+				<img src="m2.png">
+			</sup>
+		</h1>
+		<!--Crea el id y lo une con el saludo y el nombre de usuario-->
+		<h3 id="user_name" class="color_white"></h3>
+
+		<div class="form-group input_div_room_page">
+			<label>#Crear una sala:</label>
+			<!--Crea el cuadro de entrada que acepta texto, añade relleno, margenes y borde y
+				 crea una pista para que el usurio sepa que hacer-->
+			<input type="text" id="room_name" class="form-control"  placeholder="Enter Room Name" >
+
+		</div>
+
+		<button onclick="addRoom();" class="btn btn-success">#Añadir sala</button>
+		<h3 class="color_white">#SALASDETENDENCIA</h3>
+		<div id="output" style="text-align: left; margin-bottom: 70px;"></div>
+	
+	</center>
+</div>
+<script src="kwitter_room.js"></script>
+</body>
+</html>
